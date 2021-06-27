@@ -2,6 +2,7 @@ package org.example.springboot.domain.posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.springboot.domain.BaseTimeEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,11 +11,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Getter
-@NoArgsConstructor
-@Entity
-public class Posts {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@NoArgsConstructor // 파라미터가 없는 기본생성자를 생성
+@Entity // 테이블이라는 것을 표시
+public class Posts extends BaseTimeEntity {
+    @Id // PK 필드
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // PK 생성 규칙, GenerationType.IDENTITY : auto_increment
     private Long id;
 
     @Column(length=500,nullable = false)
@@ -30,5 +31,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
     }
 }

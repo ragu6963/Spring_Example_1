@@ -20,7 +20,5 @@ public class HelloController {
         // @RequestParam("name") String name : 쿼리스트링의 변수 name의 값을 문자열 변수 name에 저장한다.
         return new HelloResponseDto(name, amount);
     }
-
-
 }
 
