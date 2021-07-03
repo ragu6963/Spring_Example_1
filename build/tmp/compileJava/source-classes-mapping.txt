@@ -10,23 +10,26 @@ org/example/springboot/domain/posts/PostsRepository.java
 org/example/springboot/domain/posts/Posts.java
  org.example.springboot.domain.posts.Posts
  org.example.springboot.domain.posts.Posts$PostsBuilder
-org/example/springboot/web/PostsApiContorller.java
- org.example.springboot.web.PostsApiContorller
-org/example/springboot/web/dto/PostsDto.java
- org.example.springboot.web.dto.PostsDto
- org.example.springboot.web.dto.PostsDto$Response
- org.example.springboot.web.dto.PostsDto$Save
- org.example.springboot.web.dto.PostsDto$Save$SaveBuilder
- org.example.springboot.web.dto.PostsDto$Update
- org.example.springboot.web.dto.PostsDto$Update$UpdateBuilder
+org/example/springboot/web/dto/PostsResponseDto.java
+ org.example.springboot.web.dto.PostsResponseDto
+org/example/springboot/Application.java
+ org.example.springboot.Application
 org/example/springboot/domain/BaseTimeEntity.java
  org.example.springboot.domain.BaseTimeEntity
 org/example/springboot/web/dto/PostsSaveRequestDto.java
  org.example.springboot.web.dto.PostsSaveRequestDto
  org.example.springboot.web.dto.PostsSaveRequestDto$PostsSaveRequestDtoBuilder
-org/example/springboot/web/dto/PostsResponseDto.java
- org.example.springboot.web.dto.PostsResponseDto
-org/example/springboot/Application.java
- org.example.springboot.Application
+org/example/springboot/web/dto/PostsDto.java
+ org.example.springboot.web.dto.PostsDto
+ org.example.springboot.web.dto.PostsDto$ListResponse
+ org.example.springboot.web.dto.PostsDto$Response
+ org.example.springboot.web.dto.PostsDto$Save
+ org.example.springboot.web.dto.PostsDto$Save$SaveBuilder
+ org.example.springboot.web.dto.PostsDto$Update
+ org.example.springboot.web.dto.PostsDto$Update$UpdateBuilder
 org/example/springboot/service/posts/PostsService.java
  org.example.springboot.service.posts.PostsService
+org/example/springboot/web/PostsApiController.java
+ org.example.springboot.web.PostsApiController
+org/example/springboot/web/IndexController.java
+ org.example.springboot.web.IndexController

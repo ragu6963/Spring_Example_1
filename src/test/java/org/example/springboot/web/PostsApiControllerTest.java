@@ -40,7 +40,6 @@ public class PostsApiControllerTest {
     public void tearDown() throws Exception{
         postsRepository.deleteAll();
     }
-
     @Test
     public void Posts_등록된다() throws Exception{
         // given
@@ -110,10 +109,10 @@ public class PostsApiControllerTest {
     public void BaseTimeEntity_등록(){
         //given
         postsRepository.save(Posts.builder()
-            .title("title")
-            .content("content")
-            .author("author")
-            .build());
+                .title("title")
+                .content("content")
+                .author("author")
+                .build());
 
         List<Posts> postsList = postsRepository.findAll();
 

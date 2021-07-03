@@ -6,9 +6,11 @@ import org.example.springboot.service.posts.PostsService;
 import org.example.springboot.web.dto.PostsDto;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @RestController
-public class PostsApiContorller {
+public class PostsApiController {
     private final PostsService postsService;
 
     @PostMapping("/api/v1/posts")
@@ -24,6 +26,11 @@ public class PostsApiContorller {
     @GetMapping("/api/v1/posts/{id}")
     public PostsDto.Response findById(@PathVariable Long id) {
         return postsService.findById(id);
+    }
+
+    @GetMapping("/api/v1/posts")
+    public List<PostsDto.Response> findAll(){
+        return postsService.findAll();
     }
 
 //    private final PostsService postsService;

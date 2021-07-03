@@ -12,6 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/*
+* @RequiredArgsConstructor
+* final 필드를 인자로 하는 생성자를 생성한다.
+* @Autowired를 대체 할 수 있다. */
+
 @RequiredArgsConstructor
 @Service
 public class PostsService {
@@ -38,6 +43,12 @@ public class PostsService {
                 .orElseThrow(() ->  new IllegalAccessError("해당 게시글이 없습니다. id = " +id));
 
         return new PostsDto.Response(entity);
+    }
+
+    public List<PostsDto.Response> findAll(){
+        return  postsRepository.findAll().stream()
+                .map(PostsDto.Response::new)
+                .collect(Collectors.toList());
     }
 
 }

@@ -58,4 +58,7 @@ public class PostsDto {
             this.content = content;
         }
     }
+
+    public class ListResponse {
+    }
 }
