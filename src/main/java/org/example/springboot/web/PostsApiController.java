@@ -29,7 +29,7 @@ public class PostsApiController {
     }
 
     @GetMapping("/api/v1/posts")
-    public List<PostsDto.Response> findAll(){
+    public List<PostsDto.ListResponse> findAll(){
         return postsService.findAll();
     }
 

@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import org.example.springboot.domain.posts.Posts;
 
+import java.time.LocalDateTime;
+
 public class PostsDto {
 
     @Getter
@@ -20,6 +22,21 @@ public class PostsDto {
             this.title = entity.getTitle();
             this.content = entity.getContent();
             this.author = entity.getAuthor();
+        }
+    }
+
+    @Getter
+    public static class ListResponse {
+        private Long id;
+        private String title;
+        private String author;
+        private LocalDateTime modifiedDate;
+
+        public ListResponse(Posts entity){
+            this.id = entity.getId();
+            this.title = entity.getTitle();
+            this.author = entity.getAuthor();
+            this.modifiedDate = entity.getModifiedDate();
         }
     }
 
@@ -59,6 +76,5 @@ public class PostsDto {
         }
     }
 
-    public class ListResponse {
-    }
+
 }

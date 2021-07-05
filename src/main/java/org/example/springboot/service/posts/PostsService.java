@@ -8,7 +8,6 @@ import org.example.springboot.web.dto.PostsDto;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,9 +44,10 @@ public class PostsService {
         return new PostsDto.Response(entity);
     }
 
-    public List<PostsDto.Response> findAll(){
-        return  postsRepository.findAll().stream()
-                .map(PostsDto.Response::new)
+    @Transactional(readOnly = true)
+    public List<PostsDto.ListResponse> findAll(){
+        return postsRepository.findAll().stream()
+                .map(PostsDto.ListResponse::new)
                 .collect(Collectors.toList());
     }
 
